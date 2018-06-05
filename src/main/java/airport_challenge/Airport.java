@@ -10,7 +10,12 @@ class Airport {
         return planes;
     }
 
-    void land(Plane plane) {
+    void land(Plane plane, Weather weather) throws AirportException {
+        if (weather.isStormy()) throw new AirportException("It's too stormy!");
         planes.add(plane);
+    }
+
+    void takeOff(Plane plane) {
+        planes.remove(plane);
     }
 }
