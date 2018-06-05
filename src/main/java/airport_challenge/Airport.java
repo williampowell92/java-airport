@@ -5,9 +5,18 @@ import java.util.List;
 
 class Airport {
     private final List<Plane> planes = new ArrayList<>();
+    private int capacity = 20;
 
     List<Plane> getPlanes() {
         return planes;
+    }
+
+    int getCapacity() {
+        return capacity;
+    }
+
+    void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
     void land(Plane plane, Weather weather) throws AirportException {

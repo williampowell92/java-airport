@@ -30,6 +30,17 @@ class AirportTest {
     }
 
     @Test
+    void shouldHaveDefaultCapacityOfTwenty() {
+        assertEquals(airport.getCapacity(), 20);
+    }
+
+    @Test
+    void settingCapacityShouldChangeCapacity() {
+        airport.setCapacity(30);
+        assertEquals(airport.getCapacity(), 30);
+    }
+
+    @Test
     void noPlanesOnCreation() {
         assertTrue(airport.getPlanes().isEmpty());
     }
